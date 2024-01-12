@@ -1,5 +1,6 @@
 import './globals.css'
-
+import React from "react";
+import AnimatedCursor from "react-animated-cursor"
 
 
 export const metadata = {
@@ -11,9 +12,15 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className='dark'>
       <body>
-
-          {children}
-       
+        <AnimatedCursor
+          color='7,85,170'
+          innerSize={25}
+          innerStyle={{
+            border: '2px solid var(--border)',
+            backgroundColor: 'transparent',
+          }}
+        />
+        {children}
       </body>
     </html>
   )

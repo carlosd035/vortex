@@ -1,6 +1,7 @@
 'use client'
 import { Nav } from '@/components/Nav'
 import { Fade } from "react-awesome-reveal";
+
 const page = () => {
   return (
     <>
@@ -13,6 +14,7 @@ const page = () => {
           </div>
         </Fade>
       </div>
+     
     </>
   )
 }
