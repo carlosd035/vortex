@@ -2,23 +2,8 @@ import axios from 'axios';
 import { useEffect, useState } from 'react';
 /* import { BsSearch } from 'react-icons/bs';
 */
-function useMouse() {
-    const [cursor, setCursor] = useState({ x: null, y: null });
-
-    useEffect(() => {
-        function handler(e) {
-            setCursor({ x: e.clientX, y: e.clientY });
-        }
-
-        document.addEventListener('mousemove', handler);
-
-        return () => {
-            document.removeEventListener('mousemove', handler);
-        };
-    }, []); // Empty dependency array to ensure the effect runs only once when the component mounts
-
-    return cursor;
-}
+import { useMouse } from '../function/useMouse';
+/*   relative path -----function/useMouse.jsx */
 
 export const Weather = () => {
     const [city, setCity] = useState('');

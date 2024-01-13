@@ -1,5 +1,6 @@
-    
-function useMouse() {
+import { useState, useEffect } from 'react';
+
+export function useMouse() {
     const [cursor, setCursor] = useState({ x: null, y: null });
 
     useEffect(() => {
