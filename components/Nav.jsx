@@ -2,6 +2,7 @@
 import Image from 'next/image'
 import Link from 'next/link';
 
+
 export const Nav = () => {
   return (
     <div className="flex itens-center justify-between p-[50px]">

@@ -1,7 +1,7 @@
 'use client'
 import { Nav } from '@/components/Nav';
 import { Fade } from "react-awesome-reveal";
-import {Weather} from '@/components/Weather';
+import { Tempo } from '@/components/Tempo';
 
 
 const page = () => {
@@ -18,7 +18,7 @@ const page = () => {
         </Fade>
       </div>
       <div className ="bg-[url('/banner_weather.png')] bg-no-repeat bg-cover bg-center h-[90vh] bg-fixed">
-        <Weather /> 
+        <Tempo /> 
       </div>
     </>
   )
