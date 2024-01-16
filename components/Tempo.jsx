@@ -48,13 +48,8 @@ export const Tempo = () => {
                         </div>
                         <button onClick={fetchWeather}>
                         <FaMagnifyingGlass />
-
                         </button>
-
-
                     </form>
-
-
                 </div>
                 {weather.main && <Day data={weather} />}
             </div>
