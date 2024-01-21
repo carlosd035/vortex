@@ -6,7 +6,10 @@ export const content = [
 ];
 export const theme = {
   extend: {
-
+    colors: {
+      customColor: '#D9D9D9', // Replace with your desired color code
+    },
   },
 };
 export const plugins = [];
+

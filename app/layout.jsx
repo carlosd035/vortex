@@ -11,14 +11,14 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className='dark'>
       <body>
-       {/*  <AnimatedCursor
-          color='7,85,170'
+         <AnimatedCursor
+          color='102,204,0'
           innerSize={25}
           innerStyle={{
             border: '2px solid var(--border)',
             backgroundColor: 'transparent',
           }}
-        /> */}
+        /> 
         {children}
       </body>
     </html>

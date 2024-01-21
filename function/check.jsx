@@ -6,7 +6,6 @@ export function Check(icon) {
     const storm = ["11d","11n"];
     const snow = ["13d","13n"];
     
-    console.log(icon)
     
     if (sun.includes(icon)) {
         return "/weather/sun.png"

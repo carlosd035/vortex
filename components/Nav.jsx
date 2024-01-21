@@ -13,9 +13,9 @@ export const Nav = () => {
         height={100}
       />
       <div className='flex gap-[15px] items-center'>
-       <Link href="/profile"> <p className='text-xl font-mono text-white hover:text-neutral-300'>PROFILE</p>
+       <Link href="/#footer"> <p className='text-xl font-mono text-white hover:text-neutral-300'>CONTACTS</p>
        </Link>
-        <p className='text-xl font-mono text-white hover:text-neutral-300'>CONTACTS</p>
+
       </div>
     </div>
   )

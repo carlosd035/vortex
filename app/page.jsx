@@ -2,6 +2,7 @@
 import { Nav } from '@/components/Nav';
 import { Fade } from "react-awesome-reveal";
 import { Tempo } from '@/components/Tempo';
+import { Footer } from '@/components/Footer';
 
 
 const page = () => {
@@ -17,9 +18,12 @@ const page = () => {
           </div>
         </Fade>
       </div>
-      <div className ="bg-[url('/banner_weather.png')] bg-no-repeat bg-cover bg-center h-[90vh] bg-fixed">
-        <Tempo /> 
+      <div className="bg-[url('/banner_weather.png')] bg-no-repeat bg-cover bg-center bg-fixed">
+        <Tempo />
       </div>
+      <footer id="footer">
+        <Footer />
+      </footer>
     </>
   )
 }

@@ -3,6 +3,7 @@ import { useState } from 'react';
 import Spinner from './Spinner';
 import { Day } from './Day';
 import { FaMagnifyingGlass } from "react-icons/fa6";
+import { Next } from './Next';
 /* import { useMouse } from '../function/useMouse'; */
 
 
@@ -25,8 +26,6 @@ export const Tempo = () => {
         setLoading(false);
     };
 
-    /*     const{ x, y } = useMouse();
-     */
 
     if (loading) {
         return <Spinner />
@@ -47,11 +46,13 @@ export const Tempo = () => {
                             />
                         </div>
                         <button onClick={fetchWeather}>
-                        <FaMagnifyingGlass />
+                            <FaMagnifyingGlass />
                         </button>
                     </form>
                 </div>
                 {weather.main && <Day data={weather} />}
+
+                {weather.main && <Next city={weather.name}/>}
             </div>
         )
     }
