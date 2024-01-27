@@ -15,13 +15,18 @@ export async function forecast_2(dataPromise) {
 
         const medias_temp = [];
         const icon_2 = [];
-        for (let i = numeros; i < temperaturas.length - numeros ; i += 8) {
+        for (let i = numeros; i < temperaturas.length ; i += 8) {
             let grupo = temperaturas.slice(i, i + 8);
-            /*   let media = grupo.reduce((acc, val) => acc + val, 0) / grupo.length; */   /* dava a temperatura media dos request todos do dia  */
-            medias_temp.push(grupo[5]);
-
             let grupo_2 = icon.slice(i, i + 8);
+    
+            if (grupo.length<8){
+                break
+            }
+
             icon_2.push(grupo_2[5]); 
+            medias_temp.push(grupo[5]);
+            /*   let media = grupo.reduce((acc, val) => acc + val, 0) / grupo.length; */   /* dava a temperatura media dos request todos do dia  */
+
         }
         // Retornar os arrays resultantes
         return {

@@ -12,7 +12,7 @@ export default function RootLayout({ children }) {
     <html lang="en" className='dark'>
       <body>
          <AnimatedCursor
-          color='102,204,0'
+          color='102,0,204'
           innerSize={25}
           innerStyle={{
             border: '2px solid var(--border)',

@@ -16,11 +16,11 @@ export function request() {
     }
     var horas_retun = parseInt(hora_certa(horas, hora));
 
-    var acc = 1;
+    var acc = 2;
     for (var i = 0; i < 8; i++) {
-        horas_retun = horas_retun + 3;
+        horas_retun += 3;
         if (horas_retun <= 24) {
-            acc = acc + 1;
+            acc += 1;
         }
     }
 

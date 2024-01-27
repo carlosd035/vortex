@@ -12,22 +12,27 @@ export const Next = ({ city }) => {
         medias_temp: [],
         icon_2: [],
     }); /* use for save data after function 'forcast' */
-    const dias = []
-    const day_week = new Date();
-    const day1 = day_week.getDay();
 
-    for (var i = 1; i <= 4; i++) {
-        dias.push(day1 + i);
-        if (dias[i] > 6) {
-            dias[i] = dias[i] - 7;
+    const dias = [];
+    const day_week = new Date();
+    let day1 = day_week.getDay();
+
+    for (let i = 0; i < 4; i++) {
+        if (day1 === 6) {
+            dias.push(6)
+            day1 = 0;
+        }
+        else {
+            dias.push(day1);
+            day1++;
         }
     }
 
-    
+
+
     useEffect(() => {
         const fetchData = async () => {
             const url = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&appid=${process.env.NEXT_PUBLIC_API_KEY}`;
-
             try {
                 const response = await axios.get(url);
                 const forcastData = await forecast_2(response.data); // Wait for the promise to resolve
@@ -53,7 +58,7 @@ export const Next = ({ city }) => {
             </div>
             <div className="flex  py-8  justify-between items-center h-[300px]">
                 {Forecast.medias_temp.map((item, index) => (
-                    <ForecastItem key={index} data={item} icon={Forecast.icon_2[index]} semana={dias[index]}  />
+                    <ForecastItem key={index} data={item} icon={Forecast.icon_2[index]} semana={dias[index]} />
                 ))}
             </div>
         </div>
